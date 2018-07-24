@@ -1,27 +1,20 @@
 <template>
   <div id="app">
-    <img src="./assets/logo.png">
-    <p class="p1">12333</p>
     <router-view/>
+    <Footer v-show="$route.meta.isShow"/>
   </div>
 </template>
 
 <script>
-export default {
-  name: 'App'
-}
+  import Footer from './components/Footer/Footer.vue';
+    export default {
+      components:{
+        Footer
+
+      }
+    }
 </script>
 
 <style lang="less">
-  #app{
-    font-family: 'Avenir', Helvetica, Arial, sans-serif;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-    text-align: center;
-    color: #2c3e50;
-    margin-top: 60px;
-    .p1{
-      color: red;
-    }
-  }
+
 </style>
