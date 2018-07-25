@@ -7,6 +7,8 @@ import Goods from '../pages/Goods/Goods.vue';
 import Personal from '../pages/Personal/Personal.vue';
 import InterLayer from '../pages/InterLayer/InterLayer.vue';
 import Login from '../pages/Login/Login.vue';
+import HomeChildrenDetail from '../pages/Home/HomeChildrenDetail/HomeChildrenDetail.vue';
+import HomeMain from '../pages/Home/HomeMain/HomeMain.vue'
 Vue.use(Router);
 export default new Router({
   routes: [
@@ -15,7 +17,27 @@ export default new Router({
       component: Home,
       meta: {
         isShow: true
-      }
+      },
+      children:[
+        {
+          path:'/Home/HomeMain',
+          component:HomeMain,
+          meta: {
+            isShow: true
+          }
+        },
+        {
+        path:'/Home/HomeChildrenDetail/:id',
+        component:HomeChildrenDetail,
+          meta: {
+            isShow: true
+          }
+      },
+        {
+          path: '',
+          redirect: '/Home/HomeMain'
+        }
+      ]
     },
     {
       path: '/cart',

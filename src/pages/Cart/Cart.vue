@@ -63,7 +63,7 @@
       width: 80/@rem;
       height: 88/@rem;
       line-height: 90/@rem;
-      color: red;
+      color: #b4282d;
 
     }
   }
@@ -97,7 +97,7 @@
         line-height: 92/@rem;
         font-size: 28/@rem;
         color: #fff;
-        background: red;
+        background: #b4282d;
         margin: 0 135/@rem;
 
       }

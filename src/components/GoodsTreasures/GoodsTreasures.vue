@@ -1,7 +1,7 @@
 <template>
   <div class="GoodsPick"  v-if="recommend.recommendBanner">
     <div class="pick">严选甄品</div>
-    <div class="pick-content" v-if="recommend.recommendBanner">
+    <div class="pick-content">
       <div class="top-txt">{{recommend.recommendBanner.nickname}}</div>
       <img src="./images/01.jpg" alt="">
     </div>
@@ -12,7 +12,8 @@
       </div>
       <p class="text">{{recommend.recommendBanner.title}}</p>
     </div>
-    <div class="pick-list" v-if="recommend.recommends" v-for="(item,index) in recommend.recommends">
+    <div class="pick-list" v-if="recommend.recommends"
+         v-for="(item,index) in recommend.recommends">
       <div class="info">
         <div class="author">
           <div class="flag"><img :src="item.avatar" alt=""></div>

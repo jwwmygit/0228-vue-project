@@ -121,12 +121,11 @@
     methods:{
       verify(){
         let timer=null;
-        let isTimerId=null
         this.isRight=/^1\d{10}$/.test(this.phone)
         this.$refs.warn.textContent=this.phone ? (this.isRight ? "":"手机号格式错误"):("请输入手机号")
         if(this.isRight){
         if(i===0){
-          i=30
+          i=5
           timer=setInterval(()=>{
             i--;
             this.$refs.yz.textContent="倒计时"+i+"s";

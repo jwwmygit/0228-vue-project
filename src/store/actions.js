@@ -36,12 +36,13 @@ import {reqHeadCateList,
 
 }  from '../api'
 export default {
-  async getHeadCateList({commit}) {
+  async getHeadCateList({commit},cb) {
     const result = await reqHeadCateList()
     if (result.code === 0) {
       const headCates = result.data
       commit(RECEIVE_HEADCATES, {headCates})
     }
+    cb()
   },
   async getTagList({commit}) {
     const result = await reqTagList()
@@ -73,7 +74,7 @@ export default {
     }
 
   },
-  async getFlashSaleIndexVO({commit}) {
+  async getFlashSaleIndexVO({commit}){
     const result = await reqFlashSaleIndexVO()
     if (result.code === 0) {
       const flashSaleIndexVO = result.data
